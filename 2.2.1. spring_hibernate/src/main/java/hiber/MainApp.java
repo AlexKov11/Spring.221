@@ -15,6 +15,7 @@ public class MainApp {
               new AnnotationConfigApplicationContext(AppConfig.class);
 
       UserService userService = context.getBean(UserService.class);
+
       Car car1 = new Car("car4", 5);
       Car car2 = new Car("car3", 6);
       Car car3 = new Car("car2", 7);
