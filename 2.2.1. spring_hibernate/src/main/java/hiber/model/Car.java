@@ -6,13 +6,17 @@ import java.util.Objects;
 @Entity
 @Table(name = "cars")
 public class Car {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     @Column(name = "model")
     private String model;
+
     @Column(name = "series")
     private int series;
+
     @OneToOne(cascade = CascadeType.ALL, mappedBy = "car")
     private User user;
 
